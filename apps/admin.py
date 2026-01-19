@@ -18,7 +18,7 @@ class ExamAdmin(admin.ModelAdmin):
             obj.questions.all().delete()
 
             wb = load_workbook(obj.excel_file)
-            ws = wb.active
+            ws = wb.activex
 
             rows = list(ws.iter_rows(min_row=2, values_only=True))
 
